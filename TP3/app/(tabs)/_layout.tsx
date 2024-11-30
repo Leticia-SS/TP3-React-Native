@@ -13,6 +13,7 @@ export default function TabsLayout() {
         backgroundColor: '#140024'
       },
       tabBarStyle: {
+        borderTopWidth: 0, 
         backgroundColor: '#0d0018'
       }
     }}
