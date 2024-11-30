@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet } from 'react-native'
+// import ProfileImage from '@/components/ProfileImage';
 
 export default function Profile() {
   return (
