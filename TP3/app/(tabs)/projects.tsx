@@ -1,10 +1,9 @@
-import { Text, View, StyleSheet } from "react-native";
-// import { Link } from 'expo-router'
+import { Text, View, StyleSheet } from 'react-native'
 
-export default function Index() {
+export default function Projects() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}>Projetos</Text>
     </View>
   );
 }
@@ -13,11 +12,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#140024',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     color: '#fff',
   },
 });
-

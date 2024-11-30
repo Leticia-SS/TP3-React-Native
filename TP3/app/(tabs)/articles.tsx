@@ -1,10 +1,10 @@
 import { Text, View, StyleSheet } from 'react-native'
 // import ProfileImage from '@/components/ProfileImage';
 
-export default function Profile() {
+export default function Articles() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Perfil</Text>
+      <Text style={styles.text}>Artigos</Text>
     </View>
   );
 }
