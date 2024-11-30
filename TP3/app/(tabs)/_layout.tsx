@@ -17,8 +17,8 @@ export default function TabsLayout() {
       }
     }}
   >
-    <Tabs.Screen name="index" options={{ title: 'Home', headerShown: false, tabBarIcon: ({focused, color}) => <Ionicons name={ focused ? "home-sharp" : "home-outline"} size={30} color={color} /> }} />
-    <Tabs.Screen name="profile" options={{ title: 'Perfil', headerShown: false, tabBarIcon: ({focused, color}) => <Ionicons name={ focused ? "id-card-sharp" : "id-card-outline"} size={30} color={color} /> }} />
+    <Tabs.Screen name="index" options={{ title: 'Home', headerShown: false, tabBarIcon: ({focused, color}) => <Ionicons name={ focused ? "home-sharp" : "home-outline"} size={20} color={color} /> }} />
+    <Tabs.Screen name="profile" options={{ title: 'Perfil', headerShown: false, tabBarIcon: ({focused, color}) => <Ionicons name={ focused ? "id-card-sharp" : "id-card-outline"} size={20} color={color} /> }} />
     <Tabs.Screen name="not-found" options={{  headerShown: false }} />
   </Tabs>
   );
