@@ -1,22 +1,26 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons"
+import { useTheme } from '../../constants/ThemeContext';
+import { lightTheme, darkTheme } from '../../constants/theme';
+
 
 export default function TabsLayout() {
-
+  const { theme } = useTheme();
+  const currentTheme = theme === 'light' ? lightTheme : darkTheme;
 
   return (
   <Tabs 
     screenOptions={{
-      tabBarActiveTintColor: '#8c52ff',
-      tabBarActiveBackgroundColor: '#140024',
+      tabBarActiveTintColor: currentTheme.primary,
+      tabBarActiveBackgroundColor: theme === 'light' ? '#e0e0e0' : '#140024',
       headerShadowVisible: false,
-      headerTintColor: '#8c52ff',
+      headerTintColor: currentTheme.primary,
       headerStyle: {
-        backgroundColor: '#140024'
+        backgroundColor: currentTheme.background,
       },
       tabBarStyle: {
-        borderTopWidth: 0, 
-        backgroundColor: '#0d0018'
+        borderTopWidth: 0,
+        backgroundColor: currentTheme.background,
       },
       tabBarLabelPosition: 'below-icon',
     }}

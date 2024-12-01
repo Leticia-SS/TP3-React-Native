@@ -9,7 +9,6 @@ export default function RootLayout() {
   return (
     <>
     <ThemeProvider>
-      <StatusBar style="light" /> 
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="applicationStatus/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />
