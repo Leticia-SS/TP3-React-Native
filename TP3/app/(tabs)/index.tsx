@@ -29,8 +29,8 @@ export default function Index() {
       <TouchableOpacity onPress={pickImage}>
         <ProfileImage imgSource={profileImage} />
       </TouchableOpacity>
-      <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>João Silva</Text>
-      <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>Idade: 25 anos</Text>
+      <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>Lara Valente</Text>
+      <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>Idade: 20 anos</Text>
       <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>Desenvolvedor Full Stack</Text>
       <View style={styles.themeToggle}>
         <Text style={[styles.text, isDarkMode ? styles.darkText : styles.lightText]}>Tema Escuro</Text>
