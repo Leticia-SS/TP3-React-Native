@@ -11,8 +11,9 @@ export default function RootLayout() {
     <ThemeProvider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="applicationStatus/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />
-        <Stack.Screen name="articlesPage/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />        
+        <Stack.Screen name="applicationPage/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />
+        <Stack.Screen name="articlePage/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />        
+        <Stack.Screen name="projectPage/[id]" options={{ headerShown: true, headerShadowVisible: false, title: 'Voltar', headerTintColor: 'white', headerStyle: { backgroundColor: '#140024' },  }} />
         <Stack.Screen name="not-found" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
