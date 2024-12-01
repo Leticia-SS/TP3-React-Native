@@ -1,9 +1,6 @@
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-// import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTheme } from '../../constants/ThemeContext';
-import { createThemedStyles, lightTheme, darkTheme } from '../../constants/theme';
-
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type CandidaturaParams = {
   id: string;
@@ -13,10 +10,8 @@ type CandidaturaParams = {
 };
 
 export default function ApplicationStatusScreen() {
+  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams<CandidaturaParams>();
-  const { theme } = useTheme();
-  const styles = createThemedStyles(theme === 'light' ? lightTheme : darkTheme);
-
 
   const getStatusColor = (status: 'Aprovado' | 'Pendente' | 'Reprovado') => {
     switch (status) {
@@ -27,28 +22,27 @@ export default function ApplicationStatusScreen() {
     }
   };
 
- 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={localStyles.card}>
-        <Text style={[styles.text, localStyles.headerText]}>Detalhes da Candidatura</Text>
-        <View style={localStyles.infoContainer}>
-          <Text style={styles.primaryText}>Vaga:</Text>
-          <Text style={styles.text}>{params.vaga}</Text>
+      <View style={styles.card}>
+        <Text style={styles.headerText}>Detalhes da Candidatura</Text>
+        <View style={styles.infoContainer}>
+          <Text style={styles.label}>Vaga:</Text>
+          <Text style={styles.value}>{params.vaga}</Text>
         </View>
-        <View style={localStyles.infoContainer}>
-          <Text style={styles.primaryText}>Empresa:</Text>
-          <Text style={styles.text}>{params.empresa}</Text>
+        <View style={styles.infoContainer}>
+          <Text style={styles.label}>Empresa:</Text>
+          <Text style={styles.value}>{params.empresa}</Text>
         </View>
-        <View style={localStyles.infoContainer}>
-          <Text style={styles.primaryText}>Status:</Text>
+        <View style={styles.infoContainer}>
+          <Text style={styles.label}>Status:</Text>
           <View 
             style={[
-              localStyles.statusBadge, 
+              styles.statusBadge, 
               { backgroundColor: getStatusColor(params.status) }
             ]}
           >
-            <Text style={localStyles.statusText}>{params.status}</Text>
+            <Text style={styles.statusText}>{params.status}</Text>
           </View>
         </View>
       </View>
@@ -56,7 +50,9 @@ export default function ApplicationStatusScreen() {
   );
 }
 
-const localStyles = StyleSheet.create({
+
+
+const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#140024',
