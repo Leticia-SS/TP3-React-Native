@@ -12,7 +12,7 @@ export default function Projects() {
 
   const fetchGitHubRepos = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/Leticia-SS/repos?sort=updated&per_page=10');
+      const response = await fetch('https://api.github.com/users/Leticia-SS/repos?sort=updated&per_page=30');
       const data = await response.json();
       setRepos(data);
     } catch (error) {
