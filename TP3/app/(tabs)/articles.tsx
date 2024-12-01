@@ -27,7 +27,7 @@ export default function Articles() {
 
   const navigateToArticle = (article: Artigo) => {
     router.push({
-      pathname: "/articlesPage/[id]",
+      pathname: "/articlePage/[id]",
       params: { 
         id: article.id.toString(),
         titulo: article.titulo,

@@ -28,7 +28,7 @@ export default function Applications() {
 
   const navigateToApplicationStatus = (candidatura: Candidatura) => {
     router.push({
-      pathname: "/applicationStatus/[id]",
+      pathname: "/applicationPage/[id]",
       params: { 
         id: candidatura.id.toString(),
         vaga: candidatura.vaga,
